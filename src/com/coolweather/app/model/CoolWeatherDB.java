@@ -82,7 +82,7 @@ public class CoolWeatherDB {
 	/*从数据库中读取某省下所有城市的信息*/
 	
 	public List<City> loadCities(int provinceId){
-		List<City> list = new ArrayList<City>();
+		List<City> list = new ArrayList<City>();		
 		Cursor cursor = db.query("City", null, "province_id = ?", new String[]{String.valueOf(provinceId)}, null, null, null);
 		if (cursor.moveToFirst()) {
 			do {
